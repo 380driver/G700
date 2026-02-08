@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PlaneHTMLConfig>
+  <!--
+    G700 Symmetry Flight Deck - 9 Display Configuration
+    
+    Physical Layout:
+    - Screens 1-4: Glareshield (14.1" displays) - PFD/MFD
+    - Screens 5-9: Pedestal/Side (8" displays) - TSC
+    - Overhead: Traditional physical switches (NO SCREEN)
+  -->
+
+  <!-- ========== GLARESHIELD DISPLAYS (14.1" - 1920x1080) ========== -->
+  
+  <!-- Screen 1: PFD Left (Pilot Primary Flight Display) -->
+  <Instrument>
+    <Name>G700_PFD_Left</Name>
+    <Electric>
+      <Source>CIRCUIT ON:1</Source>
+      <Voltage>18</Voltage>
+    </Electric>
+    <HighRefresh>True</HighRefresh>
+    <Url>html_ui/Pages/G700/G700.html?id=pfd_left</Url>
+    <Size>
+      <Width>1920</Width>
+      <Height>1080</Height>
+    </Size>
+  </Instrument>
+
+  <!-- Screen 2: MFD Left (Pilot Multi-Function Display) -->
+  <Instrument>
+    <Name>G700_MFD_Left</Name>
+    <Electric>
+      <Source>CIRCUIT ON:2</Source>
+      <Voltage>18</Voltage>
+    </Electric>
+    <HighRefresh>True</HighRefresh>
+    <Url>html_ui/Pages/G700/G700.html?id=mfd_left</Url>
+    <Size>
+      <Width>1920</Width>
+      <Height>1080</Height>
+    </Size>
+  </Instrument>
+
+  <!-- Screen 3: MFD Right (Co-Pilot Multi-Function Display) -->
+  <Instrument>
+    <Name>G700_MFD_Right</Name>
+    <Electric>
+      <Source>CIRCUIT ON:3</Source>
+      <Voltage>18</Voltage>
+    </Electric>
+    <HighRefresh>True</HighRefresh>
+    <Url>html_ui/Pages/G700/G700.html?id=mfd_right</Url>
+    <Size>
+      <Width>1920</Width>
+      <Height>1080</Height>
+    </Size>
+  </Instrument>
+
+  <!-- Screen 4: PFD Right (Co-Pilot Primary Flight Display) -->
+  <Instrument>
+    <Name>G700_PFD_Right</Name>
+    <Electric>
+      <Source>CIRCUIT ON:4</Source>
+      <Voltage>18</Voltage>
+    </Electric>
+    <HighRefresh>True</HighRefresh>
+    <Url>html_ui/Pages/G700/G700.html?id=pfd_right</Url>
+    <Size>
+      <Width>1920</Width>
+      <Height>1080</Height>
+    </Size>
+  </Instrument>
+
+  <!-- ========== PEDESTAL & SIDE TSC DISPLAYS (8" - 1024x768) ========== -->
+  
+  <!-- Screen 5: TSC Pilot (Outboard Left) -->
+  <Instrument>
+    <Name>G700_TSC_Pilot</Name>
+    <Electric>
+      <Source>CIRCUIT ON:5</Source>
+      <Voltage>18</Voltage>
+    </Electric>
+    <Url>html_ui/Pages/G700/G700.html?id=tsc_pilot</Url>
+    <Size>
+      <Width>1024</Width>
+      <Height>768</Height>
+    </Size>
+  </Instrument>
+
+  <!-- Screen 6: TSC Co-Pilot (Outboard Right) -->
+  <Instrument>
+    <Name>G700_TSC_CoPilot</Name>
+    <Electric>
+      <Source>CIRCUIT ON:6</Source>
+      <Voltage>18</Voltage>
+    </Electric>
+    <Url>html_ui/Pages/G700/G700.html?id=tsc_copilot</Url>
+    <Size>
+      <Width>1024</Width>
+      <Height>768</Height>
+    </Size>
+  </Instrument>
+
+  <!-- Screen 7: TSC Pedestal Left -->
+  <Instrument>
+    <Name>G700_TSC_Pedestal_L</Name>
+    <Electric>
+      <Source>CIRCUIT ON:7</Source>
+      <Voltage>18</Voltage>
+    </Electric>
+    <Url>html_ui/Pages/G700/G700.html?id=tsc_ped_l</Url>
+    <Size>
+      <Width>1024</Width>
+      <Height>768</Height>
+    </Size>
+  </Instrument>
+
+  <!-- Screen 8: TSC Pedestal Center -->
+  <Instrument>
+    <Name>G700_TSC_Pedestal_C</Name>
+    <Electric>
+      <Source>CIRCUIT ON:8</Source>
+      <Voltage>18</Voltage>
+    </Electric>
+    <Url>html_ui/Pages/G700/G700.html?id=tsc_ped_c</Url>
+    <Size>
+      <Width>1024</Width>
+      <Height>768</Height>
+    </Size>
+  </Instrument>
+
+  <!-- Screen 9: TSC Pedestal Right -->
+  <Instrument>
+    <Name>G700_TSC_Pedestal_R</Name>
+    <Electric>
+      <Source>CIRCUIT ON:9</Source>
+      <Voltage>18</Voltage>
+    </Electric>
+    <Url>html_ui/Pages/G700/G700.html?id=tsc_ped_r</Url>
+    <Size>
+      <Width>1024</Width>
+      <Height>768</Height>
+    </Size>
+  </Instrument>
+
+  <!--
+    HARDWARE EVENT MAPPING (Optional - for physical panels)
+    
+    If using physical hardware panels, configure H-Events in your panel software:
+    
+    Flight Guidance Panel (FGP):
+    - Altitude Knob: H:G700_FGP_ALT_INC / H:G700_FGP_ALT_DEC
+    - Heading Knob: H:G700_FGP_HDG_INC / H:G700_FGP_HDG_DEC
+    - Speed Knob: H:G700_FGP_SPD_INC / H:G700_FGP_SPD_DEC
+    - VS Knob: H:G700_FGP_VS_INC / H:G700_FGP_VS_DEC
+    - Mode Buttons: H:G700_FGP_AP_ENGAGE, H:G700_FGP_FD_TOGGLE, etc.
+    
+    Radio Panel:
+    - COM1 Swap: H:G700_RADIO_COM1_Swap
+    - COM1 Knobs: H:G700_RADIO_COM1_Inc_Whole / H:G700_RADIO_COM1_Dec_Whole
+    - NAV1 Swap: H:G700_RADIO_NAV1_Swap
+    - NAV1 Knobs: H:G700_RADIO_NAV1_Inc_Whole / H:G700_RADIO_NAV1_Dec_Whole
+    
+    TSC Navigation:
+    - Home Button: H:G700_TSC_Home_Press
+    - Back Button: H:G700_TSC_Back_Press
+    
+    Overhead Panel:
+    - Battery: H:G700_OVHD_Battery_Toggle
+    - APU Start: H:G700_OVHD_APU_Start
+    - Lights: H:G700_OVHD_Beacon_Toggle, H:G700_OVHD_NavLights_Toggle, etc.
+  -->
+
+</PlaneHTMLConfig>

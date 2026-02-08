@@ -1,0 +1,33 @@
+{
+  "name": "g700-symmetry-suite",
+  "version": "1.0.0",
+  "description": "Gulfstream G700 Symmetry Flight Deck for MSFS 2024",
+  "author": "Your Name",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "tsc && npm run bundle",
+    "bundle": "rollup -c",
+    "watch": "tsc --watch",
+    "clean": "rimraf dist PackageSources",
+    "deploy": "npm run build && npm run copy-to-msfs",
+    "copy-to-msfs": "node scripts/deploy.js",
+    "package": "npm run build && node scripts/package.js",
+    "test": "npm run build && echo 'Build successful - ready for MSFS testing'",
+    "lint": "tsc --noEmit",
+    "stats": "node scripts/stats.js"
+  },
+  "devDependencies": {
+    "@types/node": "^25.2.1",
+    "typescript": "^5.9.3",
+    "rollup": "^4.0.0",
+    "@rollup/plugin-typescript": "^12.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.0",
+    "@rollup/plugin-commonjs": "^28.0.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "rimraf": "^6.0.0"
+  },
+  "dependencies": {
+    "@microsoft/msfs-sdk": "*"
+  }
+}
